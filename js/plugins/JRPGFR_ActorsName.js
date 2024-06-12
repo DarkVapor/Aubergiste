@@ -13,13 +13,13 @@
         var eventId = $gameMap._interpreter._eventId;
         var event = eventId > 0 ? $gameMap.event(eventId) : null;
         var eventName = event ? event.event().note : "";
-        var name = nameMatch ? nameMatch[1] : eventName;
+        var name = nameMatch && nameMatch[1] !== '0' ? nameMatch[1] : eventName;
         
         if (nameMatch) {
             text = text.replace(nameMatch[0], "");
         }
 
-        if (name) {
+        if (name && name !== '0') {
             this._nameWindow.setText(name);
             this._nameWindow.show();
             this._nameWindow.open();
@@ -32,9 +32,10 @@
 
     var _Window_Message_prototype_startMessage = Window_Message.prototype.startMessage;
     Window_Message.prototype.startMessage = function() {
+        this._nameWindow.setText('');
         _Window_Message_prototype_startMessage.call(this);
         var name = this._nameWindow._text;
-        if (name) {
+        if (name && name !== '0') {
             this._nameWindow.show();
             this._nameWindow.open();
         } else {
