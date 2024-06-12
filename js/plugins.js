@@ -10,5 +10,6 @@ var $plugins =
 {"name":"FC_WindowOpacity","status":true,"description":"Adjusts the transparency of the window.","parameters":{"Opacity":"255"}},
 {"name":"FC_AjustTerrainMV","status":true,"description":"Optimize the auto-selected battle background in the field map.","parameters":{"MakeBlack":"0"}},
 {"name":"FC_ShadowPenMV","status":true,"description":"Adjusts the opacity of the shadow pen.","parameters":{"Opacity":"0"}},
-{"name":"FC_AjustFontMV","status":true,"description":"Adjust around the font.","parameters":{"NoOutline":"1","NoGauge":"0","SystemIsNomal":"0","CrisisIsNomal":"0","DeathIsNomal":"0","GaugeBackIsBlack":"0","HpGaugeIsNomal":"0","MpGaugeIsNomal":"0","MpCostIsNomal":"0","PowerUpIsNomal":"0","PowerDownIsNomal":"0","TpGaugeIsNomal":"0","TpCostIsNomal":"0"}}
+{"name":"FC_AjustFontMV","status":true,"description":"Adjust around the font.","parameters":{"NoOutline":"1","NoGauge":"0","SystemIsNomal":"0","CrisisIsNomal":"0","DeathIsNomal":"0","GaugeBackIsBlack":"0","HpGaugeIsNomal":"0","MpGaugeIsNomal":"0","MpCostIsNomal":"0","PowerUpIsNomal":"0","PowerDownIsNomal":"0","TpGaugeIsNomal":"0","TpCostIsNomal":"0"}},
+{"name":"JRPGFR_ActorsName","status":true,"description":"Affiche le nom du personnage sous la fenêtre de dialogue en utilisant le champ Note de l'événement.","parameters":{}}
 ];
