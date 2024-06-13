@@ -19,11 +19,11 @@
             text = text.replace(nameMatch[0], "");
         }
 
-        if (name && name !== '0') {
+        if (name && name !== '0' && this._nameWindow) {
             this._nameWindow.setText(name);
             this._nameWindow.show();
             this._nameWindow.open();
-        } else {
+        } else if (this._nameWindow) {
             this._nameWindow.close();
         }
 
@@ -32,13 +32,16 @@
 
     var _Window_Message_prototype_startMessage = Window_Message.prototype.startMessage;
     Window_Message.prototype.startMessage = function() {
-        this._nameWindow.setText('');
+        
+        if (this._nameWindow) {
+            this._nameWindow.setText('');
+        }
         _Window_Message_prototype_startMessage.call(this);
-        var name = this._nameWindow._text;
-        if (name && name !== '0') {
+        var name = this._nameWindow ? this._nameWindow._text : '';
+        if (name && name !== '0' && this._nameWindow) {
             this._nameWindow.show();
             this._nameWindow.open();
-        } else {
+        } else if (this._nameWindow) {
             this._nameWindow.close();
         }
     };
@@ -46,7 +49,9 @@
     var _Window_Message_prototype_terminateMessage = Window_Message.prototype.terminateMessage;
     Window_Message.prototype.terminateMessage = function() {
         _Window_Message_prototype_terminateMessage.call(this);
-        this._nameWindow.close();
+        if (this._nameWindow) {
+            this._nameWindow.close();
+        }
     };
 
     var _Scene_Map_prototype_createMessageWindow = Scene_Map.prototype.createMessageWindow;

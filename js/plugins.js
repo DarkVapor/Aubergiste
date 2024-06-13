@@ -11,5 +11,7 @@ var $plugins =
 {"name":"FC_AjustTerrainMV","status":true,"description":"Optimize the auto-selected battle background in the field map.","parameters":{"MakeBlack":"0"}},
 {"name":"FC_ShadowPenMV","status":true,"description":"Adjusts the opacity of the shadow pen.","parameters":{"Opacity":"0"}},
 {"name":"FC_AjustFontMV","status":true,"description":"Adjust around the font.","parameters":{"NoOutline":"1","NoGauge":"0","SystemIsNomal":"0","CrisisIsNomal":"0","DeathIsNomal":"0","GaugeBackIsBlack":"0","HpGaugeIsNomal":"0","MpGaugeIsNomal":"0","MpCostIsNomal":"0","PowerUpIsNomal":"0","PowerDownIsNomal":"0","TpGaugeIsNomal":"0","TpCostIsNomal":"0"}},
-{"name":"JRPGFR_ActorsName","status":true,"description":"Affiche le nom du personnage sous la fenêtre de dialogue en utilisant le champ Note de l'événement.","parameters":{}}
+{"name":"JRPGFR_ActorsName","status":true,"description":"Affiche le nom du personnage sous la fenêtre de dialogue en utilisant le champ Note de l'événement.","parameters":{}},
+{"name":"JRPG_Click","status":true,"description":"v1.2.3 - With this plugin you can change the destination place sprite of the mouse\\touch input.\r\n<DestinationSprite>","parameters":{"Sprite Figure":"Off","Custom Image":"image","Animation mode":"blink","Fade speed":"12","Sprite Size":"48","Sprite Color":"#ffffff","Sprite Opacity":"120","Sprite Blend":"1"}},
+{"name":"JRPGFR_Level","status":true,"description":"","parameters":{}}
 ];
